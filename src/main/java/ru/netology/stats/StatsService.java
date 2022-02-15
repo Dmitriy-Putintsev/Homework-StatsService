@@ -43,9 +43,9 @@ public class StatsService {
 
     public int theNumberOfMonthsIsBelowAverage(int[] salesByMonth) {
         int monthsAmount = 0;
-
+        int averageSalesSumMonth = averageSalesSumMonth(salesByMonth);
         for (int saleByMonth : salesByMonth) {
-            if (saleByMonth < averageSalesSumMonth(salesByMonth)) {
+            if (saleByMonth < averageSalesSumMonth) {
                 monthsAmount += 1;
             }
         }
@@ -54,9 +54,9 @@ public class StatsService {
 
     public int theNumberOfMonthsIsAboveAverage(int[] salesByMonth) {
         int monthsAmount = 0;
-
+        int averageSalesSumMonth = averageSalesSumMonth(salesByMonth);
         for (int saleByMonth : salesByMonth) {
-            if (saleByMonth > averageSalesSumMonth(salesByMonth)) {
+            if (saleByMonth > averageSalesSumMonth) {
                 monthsAmount += 1;
             }
         }
